@@ -1,0 +1,121 @@
+一、Python的代码规范：
+class ×:
+    def ×:
+
+    def ×:
+
+  1.注意缩减。2.注意大小写。3.不要使用关键字
+
+二、字符串
+   变量规则，运算规则与java相似，但乘方为：**
+   但具有以下特性：
+
+   1.字符串特性：
+
+   str = "asd\ngd" ：输出不会带有\n，其具有换行作用。
+   输出\n的两种方式：1.\\n  2.  str = r"asd\ngd"
+
+   字符串具有索引(从0开始)，print(var[索引])，[]具有前闭后开原则
+   var="abcdefg";print(var[1:5:1]); 输出："bcde"
+   var="abcdefg";print(var[1:5:3]); 输出："be"
+
+   2.列表特性List：
+
+   var_List = [1,2,3,"a",True] ，具有可存储多种变量的特性
+
+   print(var_List[2]);输出：3
+   print(var_List[2:-2]);输出：3，同样遵循作弊右开
+
+
+   3.字符串
+   单行：str = "这是单行"
+   多行：str = """
+              这是
+              多行
+              """
+
+   4.字符串格式转化符号
+   %c 格式化字符及其ASC||码
+   %s 格式化字符串
+   %d 格式化整数
+   %u 格式化无符号整数
+   %o 格式化无符号八进制数
+   %x 格式化无符号十六进制数
+   %X 格式化无符号十六进制数，大写
+   %f 格式化浮点数，可精确到小数点后的精度
+   %e 用科学计数法格式化浮点数
+   %p 用十六进制数格式化变量的地址
+
+   5."str".format()
+   字符串之字面量插值
+   第一种：
+   demo = "bob is a {school}"
+   demo2 = demo.format(school="good boy")
+   print(demo2);输出：bob is a good boy
+   第二种：
+   name = "bob"
+   data = "good"
+   print(f"my name is {name} is {data}")
+
+   6.字符串常用API
+   第一种：
+   a = ["a","p","p","l","e"]
+   print("".join(a));输出：apple
+   print("|".join(a));输出：a|p|p|l|e
+   第二种：
+   b = "good data"
+   print(b.split(d));输出：['goo'," ",'ata']
+   第三种：
+   c = "my name is bob"
+   print(c.replace("b","B"));输出：my name is BoB
+   第四种：
+   d = " m y b "
+   d = d.strip()
+   print(d);输出：m y b
+
+三、特殊运算符
+   1.成员运算符
+   in、not in:
+   print("a" in list)
+   2.身份运算符
+   is：判断两个标识符是不是应用自同一个对象，判断两个变量之间的内存地址是否相同
+   is not...
+
+
+四、逻辑运算符
+    1.else if在Python中为elif
+    if a==b:
+
+    elif a==c:
+
+    else:
+
+    2.循环
+    for i in range(1,101,1)：1到100，步长为1
+
+    while i<5：
+
+    break跳出整个循环，continue跳出本次，pass占位符不参与运算
+
+
+五、列表
+
+   append(item):将对象添加到列表末尾，参数：item，返回值：None
+   extend(iterable):"hello"变成"h","e","l","l","o"再添加进去
+   insert(index,item):索引添加
+   pop(index)：也可以不传参，弹出索引对应的元素，不传则弹末尾
+   remove(item)：移除值为item的元素
+   sort(key，reverse)：默认为升序排序，reverse=True为倒序，key=len为长度排序
+   reverse()：列表元素反转
+
+   列表推导式
+
+   result = []
+   for i in range(1,10)
+      if i % 2 ==0:
+        result.append(i ** 2)
+
+   result = [ i ** 2 for i in range(1,11) if i % 2 == 0 ]
+
+六、元组
+   1.
